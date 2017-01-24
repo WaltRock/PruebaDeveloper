@@ -1,0 +1,32 @@
+<div class="input-group ">
+  <span class="input-group-addon" id="sizing-addon1">Name</span>
+  <input type="text" value="{{employee['name']}}" class="form-control" placeholder="Name" aria-describedby="sizing-addon1">  
+</div>
+<div class="input-group ">
+  <span class="input-group-addon" id="sizing-addon1">Email</span>
+  <input type="text" value="{{employee['email']}}" class="form-control" placeholder="Email" aria-describedby="sizing-addon1">  
+</div>
+<div class="input-group ">
+  <span class="input-group-addon" id="sizing-addon1">Phone</span>
+  <input type="text"  value="{{employee['phone']}}"class="form-control" placeholder="Phone" aria-describedby="sizing-addon1">  
+</div>
+<div class="input-group ">
+  <span class="input-group-addon" id="sizing-addon1">Address</span>
+  <input type="text" value="{{employee['address']}}" class="form-control" placeholder="Address" aria-describedby="sizing-addon1">  
+</div>
+<div class="input-group ">
+  <span class="input-group-addon" id="sizing-addon1">Position</span>
+  <input type="text" value="{{employee['position']}}" class="form-control" placeholder="Position" aria-describedby="sizing-addon1">  
+</div>
+<div class="input-group ">
+  <span class="input-group-addon" id="sizing-addon1">Salary</span>
+  <input type="text" value="{{employee['salary']}}" class="form-control" placeholder="Salary" aria-describedby="sizing-addon1">  
+</div>
+
+  <span class="input-group-addon" id="sizing-addon1">Skills</span>
+  <ul class="list-group">
+    {% for skill in employee['skills'] %}
+      <li class="list-group-item">{{skill['skill']}}</li>
+    {% endfor %}
+  </ul>
+

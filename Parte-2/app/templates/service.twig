@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employee_list>
+  {% for employee in employees %}
+    <employee>
+      <employee_id>{{employee['id']}}</employee_id>
+      <employee_name>{{employee['name']}}</employee_name>
+      <employee_email>{{employee['email']}}</employee_email>
+      <employee_phone>{{employee['phone']}}</employee_phone>
+      <employee_address>{{employee['address']}}</employee_address>
+      <employee_position>{{employee['position']}}</employee_position>
+      <employee_salary>{{employee['salary']}}</employee_salary>
+      <employee_skills>
+        {% for skills in employee['skills']%}
+          <employee_skill>
+            {{skills['skill']}}
+          </employee_skill>
+        {% endfor %}
+      </employee_skills>
+    </employee>
+  {% endfor %}
+</employee_list>
