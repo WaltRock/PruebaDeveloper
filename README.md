@@ -10,5 +10,6 @@ Parte 1
 Parte 2
 	Uso del framework slim
 	http://localhost/PruebaDeveloper/Parte-2/public/
-	Servicio en XML
-	http://localhost/PruebaDeveloper/Parte-2/public/employees/salary/1500/2000
+
+Servicio en XML
+http://localhost/PruebaDeveloper/Parte-2/public/employees/salary/1500/2000
