@@ -20,7 +20,7 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <form class="navbar-form navbar-left" action="http://localhost/slimx/public/" method="get">
+          <form class="navbar-form navbar-left" action="{{ base_url() }}" method="get">
             <div class="form-group" >
               <input type="text" name="email" class="form-control" placeholder="Email">
             </div>
@@ -33,6 +33,7 @@
     <ul class="list-group">
 
     </ul>
+    <!--Tabla de personal-->
     <table class="table table-hover">
       <thead>
         <tr>
@@ -42,6 +43,7 @@
           <th>Salary</th>
         </tr>
       </thead>
+      <!--Data de la tabla-->
       <tbody>
         {% for employee in employeeList %}
           <tr>
@@ -57,8 +59,9 @@
           </tr>
         {% endfor %}
       </tbody>
+      <!--Data de la tabla-->
     </table>
-
+    <!--Tabla de personal-->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -80,7 +83,8 @@
     <script src="{{base_url()}}/bootstrap/js/bootstrap.min.js"></script>
     <div id="myModal"></div>
     <script>
-      $("#myModal").on("show.bs.modal", function (e) {        
+      //Funcion para lanzar el modal
+      $("#myModal").on("show.bs.modal", function (e) {
         var link = $(e.relatedTarget);
         $(this).find(".modal-body").load(link.attr("href"));
       });
